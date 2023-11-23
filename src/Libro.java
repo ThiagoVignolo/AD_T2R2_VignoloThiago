@@ -17,11 +17,15 @@ public class Libro {
 
     //Metodos
     public void grabarLibro(DataOutputStream fich) throws IOException{
-
+        fich.writeLong(isbn);
+        fich.writeUTF(titulo);
+        fich.writeUTF(autor);
     }
 
     public void leerLibro(DataInputStream fich) throws IOException{
-
+        isbn = fich.readLong();
+        titulo = fich.readUTF();
+        autor = fich.readUTF();
     }
 
     public void mostrarLibro(){
