@@ -15,6 +15,10 @@ public class Libro {
         this.autor = autor;
     }
 
+    public Libro() {
+
+    }
+
     //Metodos
     public void grabarLibro(DataOutputStream fich) throws IOException{
         fich.writeLong(isbn);
@@ -29,9 +33,9 @@ public class Libro {
     }
 
     public void mostrarLibro(){
-        System.out.println("ISBN: " + isbn +
+        System.out.println("\nISBN: " + isbn +
                 "\nTitulo: " + titulo +
-                "\nAutor: " + autor);
+                "\nAutor: " + autor + "\n");
     }
 
     //Getters
